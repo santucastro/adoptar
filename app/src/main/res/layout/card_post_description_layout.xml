@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_post_description_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/default_vertical_padding"
+    android:paddingBottom="@dimen/default_vertical_padding"
+    app:cardBackgroundColor="#ffffff">
+
+    <LinearLayout
+        android:id="@+id/card_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/card_header"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:background="#354153"
+            android:gravity="center_vertical">
+
+            <!-- Rivedi effetto ripple -->
+
+            <TextView
+                android:id="@+id/card_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:maxLength="39"
+                android:maxLines="1"
+                android:textColor="#f2f2f2"
+                android:textSize="16sp"
+                tools:text="Prova" />
+
+            <ImageButton
+                android:id="@+id/card_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:contentDescription="Pet Description"
+                android:src="@drawable/arrow_down" />
+
+        </RelativeLayout>
+
+        <ViewStub
+            android:id="@+id/card_stub"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inflatedId="@+id/innerView" />
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
